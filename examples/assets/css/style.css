@@ -1,0 +1,138 @@
+/*
+ * CSS de Exemplo - Asset Guard Master Edition
+ * Este arquivo está invisível na aba Fontes (Sources) do seu Inspecionar.
+ * Ele também não aparece na aba Elements (Elementos) - é um Fantasma!
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+body {
+    background: #03040b;
+    color: #fff;
+    font-family: 'Outfit', -apple-system, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 50px 60px;
+    border-radius: 32px;
+    box-shadow: 
+        0 40px 100px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+    max-width: 640px;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 0%, #666 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+}
+
+p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+#status {
+    padding: 10px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #555;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.5s ease;
+    font-size: 0.9rem;
+}
+
+#status.ready {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+.footer-area {
+    margin-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 24px;
+}
+
+.shield-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.badge {
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-size: 0.72rem;
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(99, 102, 241, 0.1);
+    border-color: rgba(99, 102, 241, 0.3);
+    color: #a5b4fc;
+    transform: translateY(-2px);
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.btn-stealth {
+    background: rgba(255, 255, 255, 0.06);
+    color: #aaa;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 28px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.btn-stealth:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,255,255,0.1);
+}
+
+@media (max-width: 640px) {
+    .card { padding: 30px 24px; margin: 16px; }
+    h1 { font-size: 1.6rem; }
+    .shield-badges { gap: 6px; }
+    .badge { font-size: 0.65rem; padding: 4px 8px; }
+}
